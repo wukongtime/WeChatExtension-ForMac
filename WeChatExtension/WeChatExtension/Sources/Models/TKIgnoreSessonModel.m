@@ -1,16 +1,17 @@
 //
 //  TKIgnoreSessonModel.m
-//  WeChatPlugin
+//  WeChatExtension
 //
-//  Created by TK on 2017/9/15.
-//  Copyright © 2017年 tk. All rights reserved.
+//  Created by WeChatExtension on 2019/9/15.
+//  Copyright © 2019年 WeChatExtension. All rights reserved.
 //
 
 #import "TKIgnoreSessonModel.h"
 
 @implementation TKIgnoreSessonModel
 
-- (instancetype)initWithDict:(NSDictionary *)dict {
+- (instancetype)initWithDict:(NSDictionary *)dict
+{
     self = [super init];
     if (self) {
         self.selfContact = dict[@"selfContact"];
@@ -20,7 +21,8 @@
     return self;
 }
 
-- (NSDictionary *)dictionary {
+- (NSDictionary *)dictionary
+{
     return @{@"selfContact": self.selfContact,
              @"userName": self.userName,
              @"ignore": @(self.ignore)};

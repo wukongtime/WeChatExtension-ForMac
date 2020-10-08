@@ -1,16 +1,17 @@
 //
 //  NSDate+Action.m
-//  WeChatPlugin
+//  WeChatExtension
 //
-//  Created by TK on 2018/7/25.
-//  Copyright © 2018年 tk. All rights reserved.
+//  Created by WeChatExtension on 2018/7/25.
+//  Copyright © 2018年 WeChatExtension. All rights reserved.
 //
 
 #import "NSDate+Action.h"
 
 @implementation NSDate (Action)
 
-- (BOOL)isToday {
+- (BOOL)isToday
+{
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSInteger unit = NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear ;
     
@@ -20,7 +21,8 @@
     return (selfComponents.year == nowComponents.year) && (selfComponents.month == nowComponents.month) && (selfComponents.day == nowComponents.day);
 }
 
-- (BOOL)isYesterday {
+- (BOOL)isYesterday
+{
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"yyyy-MM-dd";
     

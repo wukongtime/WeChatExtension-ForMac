@@ -1,16 +1,17 @@
 //
 //  TKRemoteControlModel.m
-//  WeChatPlugin
+//  WeChatExtension
 //
-//  Created by TK on 2017/8/8.
-//  Copyright © 2017年 tk. All rights reserved.
+//  Created by WeChatExtension on 2019/8/8.
+//  Copyright © 2019年 WeChatExtension. All rights reserved.
 //
 
 #import "TKRemoteControlModel.h"
 
 @implementation TKRemoteControlModel
 
-- (instancetype)initWithDict:(NSDictionary *)dict {
+- (instancetype)initWithDict:(NSDictionary *)dict
+{
     self = [super init];
     if (self) {
         self.enable = [dict[@"enable"] boolValue];
@@ -22,7 +23,8 @@
     return self;
 }
 
-- (NSDictionary *)dictionary {
+- (NSDictionary *)dictionary
+{
     return @{@"enable": @(self.enable),
              @"keyword": self.keyword,
              @"function": self.function,
